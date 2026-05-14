@@ -150,7 +150,6 @@ A Streamlit-based interface is developed to:
 │   ├── artifacts/
 │   │   ├── scaler.pkl
 │   │   ├── metadata.csv
-│   │   ├── thresholds.pkl
 │   │
 │   ├── utils/
 │   │   ├── predict.py
