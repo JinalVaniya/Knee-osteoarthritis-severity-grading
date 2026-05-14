@@ -138,16 +138,36 @@ A Streamlit-based interface is developed to:
 
 ## Project Structure
 
-```text
-Knee-OA-Severity-Grading/
+```textKnee-OA-Severity-Grading/
 │
 ├── app/
-│   ├── streamlit_app.py
+│   ├── app.py
+│   │
+│   ├── models/
+│   │   ├── swin_ord.pth
+│   │   ├── swin_meta_ord.pth
+│   │
+│   ├── artifacts/
+│   │   ├── scaler.pkl
+│   │   ├── metadata.csv
+│   │   ├── thresholds.pkl
+│   │
 │   ├── utils/
+│   │   ├── predict.py
+│   │   ├── risk.py
+|   |   ├── advice.py
+|   |   ├── scaler.py
 │
-├── models/
-│   ├── swin_ord.pth
-│   ├── swin_meta_ord.pth
+├── training/
+│   ├── img_resnet.py
+│   ├── img_swin.py
+│   ├── meta.py
+│   ├── img_meta_naive.py
+│   ├── img_meta_resnet_multi.py
+│   ├── img_meta_swin_multi.py
+│   ├── resnet_ord.py
+│   ├── swin_ord.py
+│   ├── swin_meta_ord.py
 │
 ├── images/
 │   ├── confusion_matrix/
@@ -157,10 +177,10 @@ Knee-OA-Severity-Grading/
 │   ├── final_report.pdf
 │   ├── final_presentation.pptx
 │
-├── notebooks/
-├── requirements.txt
 ├── README.md
-└── .gitignore
+├── requirements.txt
+├── .gitignore
+└── .gitattributes
 
 ```
 ## Future Improvements
