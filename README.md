@@ -162,6 +162,7 @@ Knee-OA-Severity-Grading/
 ├── README.md
 └── .gitignore
 
+```
 ## Future Improvements
 
 Future enhancements include:
