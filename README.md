@@ -138,6 +138,7 @@ A Streamlit-based interface is developed to:
 
 ## Project Structure
 
+```text
 Knee-OA-Severity-Grading/
 │
 ├── app/
