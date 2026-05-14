@@ -162,8 +162,8 @@ A Streamlit-based interface is developed to:
 │   ├── img_swin.py
 │   ├── meta.py
 │   ├── img_meta_naive.py
-│   ├── img_meta_resnet_multi.py
-│   ├── img_meta_swin_multi.py
+│   ├── resnet_meta_multi.py
+│   ├── swin_meta_multi.py
 │   ├── resnet_ord.py
 │   ├── swin_ord.py
 │   ├── swin_meta_ord.py
