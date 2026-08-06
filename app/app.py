@@ -13,7 +13,10 @@ from utils.advice import generate_advice_llm, advice_for_streamlit, build_discla
 from pathlib import Path
 import gdown
 
+BASE_DIR = Path(__file__).resolve().parent
+
 MODEL_DIR = BASE_DIR / "models"
+MODEL_DIR.mkdir(parents=True, exist_ok=True)
 
 IMG_MODEL_PATH = MODEL_DIR / "swin_ord.pth"
 META_MODEL_PATH = MODEL_DIR / "swin_meta_ord.pth"
@@ -22,7 +25,19 @@ META_MODEL_PATH = MODEL_DIR / "swin_meta_ord.pth"
 IMG_FILE_ID = "13m_4rJtP17jkflO5rBJuAgURY-NZrVpA"
 META_FILE_ID = "1Pt6LN2sIhT_xD9Owcle0QE5fbRuacDpm"
 
-MODEL_DIR.mkdir(exist_ok=True)
+if not IMG_MODEL_PATH.exists():
+    gdown.download(
+        f"https://drive.google.com/uc?id={IMG_FILE_ID}",
+        str(IMG_MODEL_PATH),
+        quiet=False,
+    )
+
+if not META_MODEL_PATH.exists():
+    gdown.download(
+        f"https://drive.google.com/uc?id={META_FILE_ID}",
+        str(META_MODEL_PATH),
+        quiet=False,
+    )
 
 st.set_page_config(page_title="Knee OA Assistant", page_icon="🦵", layout="wide")
 
