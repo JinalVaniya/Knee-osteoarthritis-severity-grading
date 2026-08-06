@@ -11,3 +11,4 @@ opencv-python
 timm
 groq
 python-dotenv
+gdown
