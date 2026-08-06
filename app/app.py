@@ -22,6 +22,10 @@ META_MODEL_PATH = MODEL_DIR / "swin_meta_ord.pth"
 META_SCALER_PATH = ARTIFACT_DIR / "swin_meta_scaler.pkl"
 LOOKUP_PATH = ARTIFACT_DIR / "patient_metadata.csv"
 
+if not IMG_MODEL_PATH.exists():
+    st.error(f"Missing model file: {IMG_MODEL_PATH}")
+    st.stop()
+
 st.markdown(
     """
     <style>
