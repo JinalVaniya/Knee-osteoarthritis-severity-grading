@@ -1,5 +1,7 @@
 # Knee Osteoarthritis Severity Grading using Multimodal Deep Learning
 
+## Live Demo - https://knee-oa-severity-grading.streamlit.app/
+
 ## Overview
 
 This project presents a multimodal deep learning framework for automated Knee Osteoarthritis (OA) severity grading using knee X-ray images and clinical metadata. The system combines image-based deep learning models with structured clinical and radiographic information to improve OA severity prediction.
@@ -142,6 +144,12 @@ A Streamlit-based interface is developed to:
 │
 ├── app/
 │   ├── app.py
+│   ├── samples/
+│   │  ├── grade0.png
+│   │  ├── grade1.png
+│   │  ├── grade2.png
+│   │  ├── grade3.png
+│   │  └── grade4.png
 │   │
 │   ├── models/
 │   │   ├── swin_ord.pth
