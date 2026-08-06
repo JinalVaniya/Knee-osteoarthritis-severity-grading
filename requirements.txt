@@ -10,3 +10,4 @@ streamlit
 opencv-python
 timm
 groq
+python-dotenv
