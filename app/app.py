@@ -10,6 +10,19 @@ from PIL import Image
 from utils.predict import load_model, load_scaler, predict_knee_oa
 from utils.risk import get_risk_result
 from utils.advice import generate_advice_llm, advice_for_streamlit, build_disclaimer
+from pathlib import Path
+import gdown
+
+MODEL_DIR = BASE_DIR / "models"
+
+IMG_MODEL_PATH = MODEL_DIR / "swin_ord.pth"
+META_MODEL_PATH = MODEL_DIR / "swin_meta_ord.pth"
+
+# Google Drive file IDs
+IMG_FILE_ID = "13m_4rJtP17jkflO5rBJuAgURY-NZrVpA"
+META_FILE_ID = "1Pt6LN2sIhT_xD9Owcle0QE5fbRuacDpm"
+
+MODEL_DIR.mkdir(exist_ok=True)
 
 st.set_page_config(page_title="Knee OA Assistant", page_icon="🦵", layout="wide")
 
